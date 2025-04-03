@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "9792a74b-9210-4d26-97f4-a1f2aecbce17",
+		"name": "Gilded Rose",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28629003"
+	},
+	"item": [
+		{
+			"name": "Find Items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server}}/{{itemsRefactored}}",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"{{itemsRefactored}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Legacy Update Items",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "{{server}}/{{itemsLegacy}}",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"{{itemsLegacy}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refactored Update Items",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "{{server}}/{{itemsRefactored}}",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"{{itemsRefactored}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "server",
+			"value": "localhost:3000",
+			"type": "string"
+		},
+		{
+			"key": "itemsLegacy",
+			"value": "api/v1/items",
+			"type": "string"
+		},
+		{
+			"key": "itemsRefactored",
+			"value": "api/v2/items",
+			"type": "string"
+		}
+	]
+}
