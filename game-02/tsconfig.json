@@ -1,12 +1,52 @@
 {
-    "compilerOptions": {
-        "module": "commonjs",
-        "target": "es5",
-        "strict": true,
-        "noImplicitAny": false,
-        "sourceMap": false
-    },
-    "exclude": [
-        "node_modules"
-    ]
+  "compilerOptions": {
+    // Sets the module system to CommonJS, which is required for InversifyJS.
+    "module": "commonjs",
+    // Generates declaration files for your TypeScript code.
+    "declaration": true,
+    // Removes comments from the emitted JavaScript files.
+    "removeComments": true,
+    // Enables the generation of metadata required by InversifyJS for dependency injection.
+    "emitDecoratorMetadata": true,
+    // Allows the use of decorators, which InversifyJS requires for annotations.
+    "experimentalDecorators": true,
+    // Allows default imports from modules that don't have default exports.
+    "allowSyntheticDefaultImports": true,
+    // Sets the target ECMAScript version to ES2023, which supports modern syntax.
+    "target": "ES2023",
+    // Enables source map generation for debugging.
+    "sourceMap": true,
+    // Specifies the directory where compiled JavaScript files will be output.
+    "outDir": "./dist",
+    // Sets the base directory to resolve non-relative module names.
+    "baseUrl": "./",
+    // Speeds up recompilation by only rebuilding files that changed.
+    "incremental": true,
+    // Skips type checking of declaration files, reducing compilation time.
+    "skipLibCheck": true,
+    // Enables strict null checks, making the code safer by preventing null or undefined values.
+    "strictNullChecks": true,
+    // Ensures consistent casing in file names.
+    "forceConsistentCasingInFileNames": true,
+    // Disallows variables with the 'any' type unless explicitly stated.
+    "noImplicitAny": false,
+    // Disables strict type checking for 'bind', 'call', and 'apply' methods.
+    "strictBindCallApply": false,
+    // Disables error reporting for fallthrough cases in switch statements.
+    "noFallthroughCasesInSwitch": false,
+    // Enables stricter function types, helpful for dependency injection.
+    "strictFunctionTypes": true,
+    // Makes the compiler check for unused local variables.
+    "noUnusedLocals": true,
+    // Makes the compiler check for unused function parameters.
+    "noUnusedParameters": true,
+    // Adds support for Node.js types.
+    "types": ["node", "reflect-metadata"],
+    // Imports the necessary libraries for the target environment.
+    "lib": ["ES2023"]
+  },
+  // Specifies the root folders for TypeScript files.
+  "include": ["src/**/*"],
+  // Excludes compiled files and node_modules from being processed.
+  "exclude": ["node_modules", "dist"]
 }
