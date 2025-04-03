@@ -1,8 +1,8 @@
 import { inject, injectable } from "inversify";
 import { TYPES } from "../configurations/inversify-types";
-import { Item } from "src/domain/models/item";
-import { FindItemsService } from "src/application/services/find-items-service";
-import { RefactoredUpdateItemsService } from "src/application/services/refactored-update-items-service";
+import { Item } from "../../domain/models/item";
+import { FindItemsService } from "../../application/services/find-items-service";
+import { RefactoredUpdateItemsService } from "../../application/services/refactored-update-items-service";
 
 @injectable()
 export class RefactoredItemController {

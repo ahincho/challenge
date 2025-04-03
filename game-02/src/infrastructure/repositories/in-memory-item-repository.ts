@@ -1,6 +1,6 @@
 import { injectable } from "inversify";
-import { Item } from "src/domain/models/item";
-import { ItemRepository } from "src/domain/repositories/item-repository";
+import { Item } from "../../domain/models/item";
+import { ItemRepository } from "../../domain/repositories/item-repository";
 
 @injectable()
 export class InMemoryItemRepository implements ItemRepository {

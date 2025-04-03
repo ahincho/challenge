@@ -1,52 +1,64 @@
 {
   "compilerOptions": {
-    // Sets the module system to CommonJS, which is required for InversifyJS.
+    // Sets the module system to CommonJS, necessary for working with InversifyJS in a Node.js environment.
     "module": "commonjs",
-    // Generates declaration files for your TypeScript code.
+    // Generates declaration (.d.ts) files to allow other projects to use exported types.
     "declaration": true,
-    // Removes comments from the emitted JavaScript files.
+    // Removes comments from the compiled code to reduce the output file size.
     "removeComments": true,
-    // Enables the generation of metadata required by InversifyJS for dependency injection.
+    // Enables the generation of metadata required for using decorators with InversifyJS.
     "emitDecoratorMetadata": true,
-    // Allows the use of decorators, which InversifyJS requires for annotations.
+    // Allows interoperability with CommonJS modules, enabling the use of default imports.
+    "esModuleInterop": true,
+    // Enables the use of decorators, such as those used for dependency injection with InversifyJS.
     "experimentalDecorators": true,
-    // Allows default imports from modules that don't have default exports.
+    // Allows importing modules without default exports using default import syntax.
     "allowSyntheticDefaultImports": true,
-    // Sets the target ECMAScript version to ES2023, which supports modern syntax.
+    // Sets the ECMAScript version to ES2023 to support the latest JavaScript syntax.
     "target": "ES2023",
-    // Enables source map generation for debugging.
+    // Generates source maps (.map files) to facilitate debugging in the browser or development environment.
     "sourceMap": true,
-    // Specifies the directory where compiled JavaScript files will be output.
+    // Specifies the output directory where compiled files will be generated.
     "outDir": "./dist",
-    // Sets the base directory to resolve non-relative module names.
+    // Defines the base directory for resolving relative module names.
     "baseUrl": "./",
-    // Speeds up recompilation by only rebuilding files that changed.
+    // Enables incremental compilation to rebuild only changed files, improving performance.
     "incremental": true,
-    // Skips type checking of declaration files, reducing compilation time.
+    // Skips type checking for declaration files to speed up the compilation process.
     "skipLibCheck": true,
-    // Enables strict null checks, making the code safer by preventing null or undefined values.
+    // Enables strict checks for null and undefined values, preventing runtime errors.
     "strictNullChecks": true,
-    // Ensures consistent casing in file names.
+    // Ensures consistent casing for file names, especially important on case-sensitive systems.
     "forceConsistentCasingInFileNames": true,
-    // Disallows variables with the 'any' type unless explicitly stated.
+    // Allows variables with the 'any' type but recommends avoiding it for safer code.
     "noImplicitAny": false,
-    // Disables strict type checking for 'bind', 'call', and 'apply' methods.
+    // Disables strict type checking for 'bind', 'call', and 'apply' methods, useful when the context is unclear.
     "strictBindCallApply": false,
-    // Disables error reporting for fallthrough cases in switch statements.
+    // Suppresses warnings for fall-through cases in switch statements.
     "noFallthroughCasesInSwitch": false,
-    // Enables stricter function types, helpful for dependency injection.
+    // Enables stricter function type checking, particularly useful for dependency injection.
     "strictFunctionTypes": true,
-    // Makes the compiler check for unused local variables.
+    // Generates warnings if there are declared but unused local variables.
     "noUnusedLocals": true,
-    // Makes the compiler check for unused function parameters.
+    // Generates warnings if there are unused function parameters.
     "noUnusedParameters": true,
-    // Adds support for Node.js types.
-    "types": ["node", "reflect-metadata"],
-    // Imports the necessary libraries for the target environment.
-    "lib": ["ES2023"]
+    // Includes specific types for Node.js and reflect-metadata, required for runtime.
+    "types": [
+      "node",
+      "reflect-metadata"
+    ],
+    // Defines the JavaScript libraries available in the runtime environment.
+    "lib": [
+      "ES2023"
+    ]
   },
-  // Specifies the root folders for TypeScript files.
-  "include": ["src/**/*"],
-  // Excludes compiled files and node_modules from being processed.
-  "exclude": ["node_modules", "dist"]
+  // Specifies the root folders containing TypeScript files to be compiled.
+  "include": [
+    "src/**/*"
+  ],
+  // Excludes the node_modules and dist folders from the compilation process.
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }

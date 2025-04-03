@@ -1,6 +1,6 @@
 import { injectable } from "inversify";
-import { Item } from "src/domain/models/item";
-import { ItemQualityUpdateStrategy } from "src/domain/strategies/item-quality-update-strategy";
+import { Item } from "../../domain/models/item";
+import { ItemQualityUpdateStrategy } from "../../domain/strategies/item-quality-update-strategy";
 
 @injectable()
 export class ConjuredItemStrategy implements ItemQualityUpdateStrategy {

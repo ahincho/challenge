@@ -1,8 +1,8 @@
 import { inject, injectable } from "inversify";
-import { Item } from "src/domain/models/item";
-import { ItemType } from "src/domain/models/item-type";
-import { ItemQualityUpdateStrategy } from "src/domain/strategies/item-quality-update-strategy";
-import { TYPES } from "src/infrastructure/configurations/inversify-types";
+import { Item } from "../../domain/models/item";
+import { ItemType } from "../../domain/models/item-type";
+import { ItemQualityUpdateStrategy } from "../../domain/strategies/item-quality-update-strategy";
+import { TYPES } from "../../infrastructure/configurations/inversify-types";
 
 @injectable()
 export class UpdateItemQualityService {
